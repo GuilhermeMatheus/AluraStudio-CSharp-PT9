@@ -24,18 +24,19 @@ namespace ByteBankImportacaoExportacao
                 while (numeroDeBytesLidos != 0)
                 {
                     numeroDeBytesLidos = fluxoDoArquivo.Read(buffer, 0, 1024);
-                    EscreverBuffer(buffer);
+                    Console.WriteLine($"Bytes lidos: {numeroDeBytesLidos}");
+                    EscreverBuffer(buffer, numeroDeBytesLidos);
                 }
             }
 
             Console.ReadLine();
         }
 
-        static void EscreverBuffer(byte[] buffer)
+        static void EscreverBuffer(byte[] buffer, int bytesLidos)
         {
             var utf8 = Encoding.Default;
 
-            var texto = utf8.GetString(buffer);
+            var texto = utf8.GetString(buffer, 0, bytesLidos);
             Console.Write(texto);
 
             //foreach (var meuByte in buffer)
