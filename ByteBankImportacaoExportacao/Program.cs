@@ -14,6 +14,18 @@ namespace ByteBankImportacaoExportacao
     { 
         static void Main(string[] args) 
         {
+
+
+            CriarArquivo(); 
+            Console.WriteLine("Arquivo criado!"); 
+            Console.Read(); 
+
+
+
+
+
+
+
             var enderecoDoArquivo = "contas.txt";
 
             using (var fluxoDeArquivo = new FileStream(enderecoDoArquivo, FileMode.Open)) 
