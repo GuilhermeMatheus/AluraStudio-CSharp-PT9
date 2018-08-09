@@ -14,8 +14,9 @@ namespace ByteBankImportacaoExportacao
     { 
         static void Main(string[] args) 
         {
+            LeituraBinaria();
 
-            TestaEscrita();
+
             Console.WriteLine("Aplicação finalizada. . .");
 
 
